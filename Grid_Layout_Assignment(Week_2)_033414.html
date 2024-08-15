@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Assignment</title>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+
+        body{
+            background-color: cornflowerblue; 
+        }
+
+        h1{
+            text-align: center;
+            text-shadow: white;
+        }
+
+        .details{
+            text-align: left ;
+            background-color: grey ;
+            border: 5px solid black;
+            border-radius: 15px;
+            display: grid;
+            align-content: space-between;
+
+        }
+
+        .cwwtechschools{
+            display: grid;
+            border: 5px solid black;
+            border-top-left-radius: 28px;
+            border-bottom-right-radius: 28px;
+            background-color: chartreuse;
+            grid-template-columns: repeat(2, 5fr);
+            grid-template-rows: repeat(4, 100px);
+            grid-template-areas: 
+            'header header'
+            'main body'
+            'second right'
+            'third left';
+            text-align: center;
+        
+
+        }
+
+        .top{
+            justify-content: center;
+            grid-area: header;
+        }
+
+        .sch1{
+            background-color: blue;
+            grid-area: main;
+           text-align: center;
+           border-radius: 20px;
+        }
+
+        .sch2{
+            background-color: aqua;
+            grid-area: body;
+            border-radius: 20px;
+        }
+
+        .sch3{
+            background-color: blueviolet;
+            grid-area: second;
+            border-radius: 20px;
+        }
+
+        .sch4{
+            background-color: brown;
+            grid-area: right;
+            border-radius: 20px;
+        }
+
+        .sch5{
+            background-color: burlywood;
+            grid-area: third;
+            border-radius: 20px;
+        }
+
+        .sch6{
+            background-color: rgb(172, 11, 11);
+            grid-area: left;
+            border-radius: 20px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Web Page Layout Using Grid Layout </h1>
+    <div class="details">
+        <h2>Name: David Elijah Uma</h2>
+        <h2>Trainee ID: 61710</h2>
+        <h2>School: CWW TECH AFRICA</h2>
+        <h2>Course: Web Development</h2>
+    </div>
+
+    <div class="cwwtechschools">
+        <div>
+            <h1 class="Top">Courses Offered By CWW Tech Africa</h1>
+        </div>
+        <div class="sch1">
+            <h2>Web Development</h2>
+        </div>
+        <div class="sch2">
+            <h2>Product Management</h2>
+        </div>
+        <div class="sch3">
+            <h2>Graphics Design</h2>
+        </div>
+        <div class="sch4">
+            <h2>Digital Marketing</h2>
+        </div>
+        <div class="sch5">
+            <h2>Python Programming</h2>
+        </div>
+        <div class="sch6">
+            <h2>Data Analysis</h2>
+        </div>
+    </div>
+
+</body>
+</html>
