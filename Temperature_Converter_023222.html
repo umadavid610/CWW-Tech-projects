@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Temperature Converter</title>
+    <link rel="shortcut icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+    <style>
+        
+       *{
+           box-sizing: border-box;
+    
+        }
+
+h1{
+    text-align: center;
+}
+
+.details{
+            text-align: left ;
+            background-color: grey ;
+            border: 5px solid black;
+            border-radius: 15px;
+            display: flex;
+            align-content: space-evenly;
+            justify-content: space-evenly;
+            height: 406px;
+            padding-top: 50px;
+        }
+
+
+body{
+    background-color: #3164ff ;
+}
+
+
+.wrapper{
+    width: 1690px;
+    background-color: #ffffff;
+    padding: 70px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.25);
+    border: 5px solid black;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, 60px);
+    gap: 30%;
+
+    
+}
+
+.arrow{
+    border-radius: 0px;
+    margin-top: -35px;
+}
+
+.container{
+    font-weight: bolder;
+}
+
+input{
+    font-size: 130%;
+    font-weight: medium;
+    width: 100px;
+    height: 50px;
+    border: solid;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 8px;
+    padding: 0 10px;
+
+}
+
+input:focus{
+    border-color: #3164ff;
+}
+
+    </style>
+    
+  
+</head>
+<body>
+    <h1>TEMPERATURE CONVERTER </h1>
+    <div class="details">
+        <div>
+        <h2>Name: David Elijah Uma</h2>
+        </div>
+        <div> 
+        <h2>Trainee ID: 61710</h2>
+        </div>   
+        <div>   
+        <h2>School: CWW TECH AFRICA</h2>
+        </div>
+        <div>
+        <h2>Course: Web Development</h2>
+        </div>
+    </div>
+   
+    <div class="wrapper">
+        <div class="container">
+            <label for="celsius">Celsius</label>
+            <input type="number" id="celsius" 
+            oninput="celToFar()">
+        </div>
+
+        <div>
+            <img class="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAACUCAMAAAD79nauAAAAY1BMVEX///8dHRsAAAAaGhiSkpAgICC9vb3v7+95eXn8/Pz29vbb29sWFhTS0tIEBADl5eWysrKHh4dra2mkpKKdnZyAgIDJychZWVkvLy4PDw1eXl5mZmY9PTx0dHM1NTRLS0lEREOv8gI8AAACA0lEQVR4nO3Z65aaMBSGYdggmMjByOgYRZ37v8qGiqPtalcHjIG27/PfHT9yIiGKAAAAAAAAAAAAAAAAAAAAgP+NmvoPPE+v9F/elIp0avJXVP6V3KQ6Up473tXLN7IMF2Ipmxf0RSkSNkQlpeeiupEiDhsiLqRRPpeS+iRxHDpE12DtraLavXclw4dI5H3nqSvU2/l7hvAhXJPnNy9DKt8UNr5W3IbbJ7bXEHFRbJ59cu4ZrNoqifuCF5MGYi5F32hSteWzO0Zj+264FpRQinur1jZPRaiXj9WmUoxfpVwP9qvS5LpVamyKZj+PDI7smxHTQkW1Efvn6qHYytTD53d5+FyVZiGpDoPfpdZ7G88qhOuM/XpIAhVlMpvpcCeSDeuJ7GJn1hGJvQzM4HbqZTWDLeLObRaroRncO1Mzp9Wpqppx71C782wmhpyzsXctq6PMYmIkchwxlG50+uOQSoJ5bNVKd/UxNoP7YdZWD+UWwdybTGw7eFX6mRtSt1XKHrJQ1od+BCyKp4bSjTaLCU92dmG0j+tTtf6Y7oz9MehV47fcQb28rlIT3HYcS38XT9p0EyN0iES2udeL+MydtQOHsOJnKH1SUd7asCFsW/v+HuJSGHsKF+JUvOY7gm7ScCHSMWfqr1B1uH2iVv/ExzUAAAAAAAAAAAAAAAAAAADg674BjWYgitMWfM8AAAAASUVORK5CYII=" alt="">
+        </div>
+
+     <div class="container">
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="number" id="fahrenheit"
+            oninput="farToCel()">
+        </div>
+
+    </div>
+
+    
+
+   
+    <script>
+        let celsius = document.getElementById("celsius");
+let fahrenheit = document.getElementById("fahrenheit");
+
+function celToFar(){
+    let output = ( parseFloat(celsius.value)  * 9/5) + 
+     32;
+     fahrenheit.value = parseFloat(output.toFixed(2));
+}
+
+
+function farToCel(){
+    let output = ( parseFloat(fahrenheit.value) -32) * 
+     5/9;
+    celsius.value = parseFloat(output.toFixed(2));
+    console.log(output);
+
+}
+    </script>
+
+    
+</body>
+</html>
